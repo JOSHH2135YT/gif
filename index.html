@@ -4,6 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buscador de GIFs</title>
+     <style>
+    /* --- ESTILOS PARA EL CONTENEDOR DE GIFs --- */
+#contenedor {
+  display: grid;
+  /* Crea una cuadrícula responsiva: las columnas se ajustan automáticamente */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px; /* Espacio entre los GIFs */
+  padding: 20px;
+  max-width: 1200px; /* Ancho máximo para pantallas grandes */
+  margin: 0 auto; /* Centra el contenedor en la pantalla */
+}
+
+/* --- ESTILOS INDIVIDUALES PARA CADA GIF --- */
+#contenedor img {
+  width: 100%;
+  height: 200px; /* Altura fija para que todos los GIFs se vean alineados */
+  object-fit: cover; /* Evita que el GIF se deforme, recortando los bordes si es necesario */
+  border-radius: 12px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Prepara la animación para el hover */
+  cursor: pointer;
+}
+
+/* --- EFECTO AL PASAR EL RATÓN (HOVER) --- */
+#contenedor img:hover {
+  transform: scale(1.05); /* Hace que el GIF crezca ligeramente */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Hace la sombra más pronunciada */
+}
+  </style>
   </head>
   <body>
     <div class="formularios" id="formulario">
